@@ -242,6 +242,7 @@ struct Value : internal::Variant
 
   Value(char* value) : internal::Variant(JSON::String(value)) {}
   Value(const char* value) : internal::Variant(JSON::String(value)) {}
+  Value(const std::string &value) : internal::Variant(JSON::String(value)) {}
 
   // Arithmetic types are specifically routed through Number because
   // there would be ambiguity between JSON::Bool and JSON::Number
